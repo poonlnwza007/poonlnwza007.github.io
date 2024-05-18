@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="two.js"> </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="three.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    </head>
+
+    <body>
+        <nav>
+            <div class ="nav-bar">
+                <div class ="nav-bar-left">
+                <img class="nav-logo-img" src="https://experiencelife.lifetime.life/wp-content/uploads/2020/07/etbd20314723-card-meat-matters.jpg">
+                <div class="nav-name-shop" style="font-size: 2vw;
+                            color: azure;" > meat every day
+
+                    <div onclick="lookReview()" id = "nav-review" class="nav-review" >Review
+                       <div class="star-review">
+                        0.00
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+
+            <div class="nav-bar-right">
+                <div class="nav-profile">
+                    <p class="nav-profile-name" >cart </p>
+                    <div onclick="openCart()" class="nav-profile-cart">
+                    <i class="fas fa-cart-shopping"></i>
+                    <div id="cart_count"
+                    class="cartcount"
+                    style="display:flex;">
+                    0
+                    </div>
+                </div>
+            </div>
+        </div>
+</nav>
+
+        <div class="container">
+            <!--รายการค้นหา-->
+            <div class="searchbar">
+                <input onkeyup="serchmeat(this)"
+                    id="text_serch"
+                    type="text"
+                    class="sidesearchbar"
+                    placeholder="serchmeat">
+
+                <a onclick="serchmeatclick('All')" class="serchbar-items">
+                    All
+                </a>
+                <a onclick="serchmeatclick('pig')" class="serchbar-items">
+                    pig
+                </a>            
+                <a onclick="serchmeatclick('pig3chan')" class="serchbar-items">
+                    pig3chan
+                </a>
+                <a onclick="serchmeatclick('pigtidmunandbacon')" class="serchbar-items">
+                    pigtidmun and bacon
+                </a>            
+            </div>
+
+            <div id="menulist" class="menu ">
+                
+
+            </div>
+        </div>
+        
+
+        <div id="detail-cart" class="detail" style="display: none;" >
+         <div onclink="closedetail()" class="detail-bg"></div>
+              <div class="detail-page">
+                  <h2>My cart</h2>
+
+                  <div id="mycart" class="cartlist" >
+                      <div class="cartlist-items" >
+                          <div class="cartlist-left" >
+                              <img src="https://i.natgeofe.com/k/0ed36c42-672a-425b-9e62-7cc946b98051/pig-fence_square.jpg">
+                              <div class="cartlist-detail">
+                                  <p>หมู</p>
+                                  <p style="color: rgb(0, 0, 0);">Price for one pice 1200 THB</p>
+                                  <p>1200 THB</p>
+                              </div>
+                          </div>
+                          <div class="cartlist-right">
+                            <p onclick="de_in_item('-')" class="btnc">-</p>
+                            <p id ="countitems" style="margin: 0 20px;">0</p>
+                            <p onclick="de_in_item('+')" class="btnc">+</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="totalcart" style="display: flex;">
+                      Total coat :
+                  </div>
+
+                  <div class="btn-control">
+                    <button onclick="closedetail()" class=""btn>
+                        close
+                    </button>
+                    <button onclick="submititem()" class="btn btn-buy">
+                        Buy
+                    </button>
+                  </div>
+              </div>
+        </div>
+        
+
+   
+
+
+    </body>
+</html>
